@@ -74,23 +74,6 @@ Now you can call `pullshot` from anywhere on your system.
 
 ---
 
-## Permissions
-
-Ensure the following:
-
-- `/opt/pullshot/` is readable by the user running Pullshot
-- Your `~/.ssh/id_ed25519` key is added and loaded into your SSH agent
-- If cloning private GitHub repos, make sure you’ve added your public key to GitHub:
-  - https://github.com/settings/keys
-
-Test SSH:
-
-```bash
-ssh -T git@github.com
-```
-
----
-
 ## Configuration
 
 Copy the example config and modify:
@@ -104,9 +87,9 @@ sudo nano /opt/pullshot/pullshot.json
 
 ```json
 {
-  "watchdog": {
+  "myProject": {
     "repo": "git@github.com:YourUsername/YourRepo.git",
-    "path": "/home/youruser/projects/watchdog",
+    "path": "/home/youruser/projects/myProject",
     "post_install": [
       "pip3 install -r requirements.txt",
       "python3 setup.py"
@@ -134,7 +117,7 @@ pullshot <project-name>
 For example:
 
 ```bash
-pullshot watchdog
+pullshot myProject
 ```
 
 This will:
@@ -151,22 +134,11 @@ This will:
 ## Example Output
 
 ```
-[*] Using repo: git@github.com:MarchanoGG/WatchDog.git
-[*] Target path: /home/pi/projects/watchdog
+[*] Using repo: git@github.com:MarchanoGG/myProject.git
+[*] Target path: /home/pi/projects/myProject
 [*] Directory exists, pulling latest changes...
 [*] Running post-install commands...
 [CMD] pip3 install -r requirements.txt
 [CMD] python3 setup.py
 [✓] Done.
-```
-
----
-
-## Git Ignore Strategy
-
-Your actual config should never be committed. The `.gitignore` file contains:
-
-```
-pullshot.json
-*.log
 ```
