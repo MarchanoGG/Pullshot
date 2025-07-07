@@ -1,0 +1,9 @@
+{
+  "example-project": {
+    "repo": "https://github.com/username/project.git",
+    "path": "/absolute/path/to/project",
+    "post_install": [
+      "pip install -r requirements.txt"
+    ]
+  }
+}
