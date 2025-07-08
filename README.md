@@ -4,6 +4,10 @@ Pullshot is a minimal, fault-tolerant CLI tool for Linux-based systems that auto
 
 Ideal for deployment pipelines, Raspberry Pi projects, or managing infrastructure scripts, Pullshot offers a plug-and-play experience with predictable results.
 
+![carbon (1)](https://github.com/user-attachments/assets/5ae33a75-5f70-405b-8ae3-683e7e1f5e3c)
+
+![carbon](https://github.com/user-attachments/assets/a88bc81a-7ad1-4c13-bd1f-5902a3c4a5ca)
+
 ---
 
 ## Features
